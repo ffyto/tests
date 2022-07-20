@@ -22,6 +22,11 @@ function Group() {
       userName: 'Mary',
       age: 50,
       city: 'Berlin',
+    },
+    {
+      userName: 'Mauricio',
+      age: 33,
+      city: 'Medellin',
     }
   ];
   return (
