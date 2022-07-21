@@ -1,13 +1,26 @@
 import './App.css'
 import Group from './pages/group.jsx';
-import People from './components/people_function';
+import AddToDo from './pages/addToDo';
+import OnionHater from './pages/onionHater';
+import Destiny from './pages/Destiny';
+import Destiny_useState from './pages/Destiny_useState';
+import OnionHater_useSate from './pages/onionHater_useState';
+import Container from './components/Container'
 
 
 function App() {
 
   return (
-  <div className='App'>
-  <Group/>
+  <div>
+    <div>
+      {/* <Group/> */}
+      <AddToDo/>
+      {/* <OnionHater/> */}
+      {/* <Destiny/> */}
+      {/* <Destiny_useState/> */}
+      {/* <OnionHater_useSate/> */}
+      {/* <Container/> */}
+    </div>
   </div>
   );
 }
