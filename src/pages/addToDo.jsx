@@ -21,7 +21,7 @@ function AddToDo() {
       console.log(Tasks);
       document.getElementById('input').value = '';
     }
-    else{alert("Please introduce a new task");}
+    else{alert("Please, introduce a card");}
   }
 
   const handlerChangeCheck = (id) => {
@@ -39,28 +39,27 @@ function AddToDo() {
     setTasks(newTasks);
 }
   return (
-    <div>
-    <ul>
-    {Tasks.map((task) =>{
-          return (
-              <li key={task.id}>
-                  <input type="checkbox" onChange={() => {handlerChangeCheck(task.id)}}/>
-                  {task.texto}
-              </li>
-          )
-     })}
-     {
-     }
-
-    </ul>
-    
-    
-      <form onSubmit={handlerSubmit}>
-        <input type="text" placeholder="What's your next task?" onChange={handlerChange} name="tarea" id="input"/>
-        <button type="submit" >Add to Do</button>
-      </form>
-      <hr/>
-      <button onClick={handlerDelete}>Press to Delete done</button>
+    <div className="ToDo__column">
+      <div className="ToDo__cards">
+        <ul className="ToDo__cardlist">
+          {Tasks.map((task) =>{
+                return (
+                    <li key={task.id} className="ToDo__cardlist__item">
+                        <input type="checkbox" onChange={() => {handlerChangeCheck(task.id)}} />
+                        {task.texto}
+                    </li>
+                )
+          })}
+        </ul>
+      </div>
+      <div className="ToDo__submit">
+        <form onSubmit={handlerSubmit}>
+          <span className="ToDo__input"><input type="text" placeholder="What's the card's name?" onChange={handlerChange} name="tarea" id="input"/></span>
+          <button type="submit" >Add the card</button>
+        </form>
+        <hr className="ToDo_hr"/>
+        <span className="ToDo__delete"><button onClick={handlerDelete} >Press to Delete done</button></span>
+      </div>
     </div>
   )
 }
