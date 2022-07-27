@@ -33,7 +33,7 @@ function Destiny_useState() {
         </select>
         {
           City !== ''
-            ?<h1>Yor destination is {City}</h1>
+            ?<h1>Yor new destination is {City}</h1>
             : null
         }
       </div>
